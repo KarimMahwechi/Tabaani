@@ -14,16 +14,13 @@ public class AnswerQuestionsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_answer_questions);
         Button BTNsuivant = findViewById(R.id.suivantAnswerQuestion);
 
-
         BTNsuivant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),ANswerQuestion2.class) ;
+                Intent intent = new Intent(getApplicationContext(), AnswerQuestion2Activity.class) ;
                 startActivity(intent);
             }
         });
-
-
 
     }
 }

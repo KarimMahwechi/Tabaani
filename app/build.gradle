@@ -11,7 +11,7 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
-
+        vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -38,5 +38,7 @@ dependencies {
 
     implementation 'br.com.simplepass:loading-button-android:1.14.0'
     implementation "androidx.cardview:cardview:1.0.0"
+
     implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0-alpha1'
 }

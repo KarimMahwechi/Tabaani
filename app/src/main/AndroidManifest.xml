@@ -28,7 +28,7 @@
 
 
         <activity
-            android:name=".ANswerQuestion2"
+            android:name=".AnswerQuestion2Activity"
             android:exported="true"
             android:theme="@style/AppTheme.NoActionBar"/>
 

@@ -3,4 +3,5 @@
     <string name="login_email_hint">Email</string>
     <string name="login_password_hint">Mot du passe </string>
     <string name="login_passwordConfirmation_hint">Confirmer la mot de passe </string>
+    <!-- Question du formulaire -->
 </resources>

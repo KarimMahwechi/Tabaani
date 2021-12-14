@@ -64,7 +64,7 @@
                         <EditText
                             android:id="@+id/editTextAccount_Nom"
                             style="@style/modifiedEditText"
-                            android:hint="Votre Pseudo : "
+                            android:hint="Votre pseudo : "
                             android:inputType="textPersonName"
                             android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -77,13 +77,13 @@
                         <EditText
                             android:id="@+id/editTextAccount_Age"
                             style="@style/modifiedEditText"
-                            android:hint="Votre Age :"
+                            android:hint="Votre age :"
                             android:inputType="number"
                             android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputMobile"
+                        android:id="@+id/textInputSexe"
                         style="@style/parent"
                         android:layout_marginTop="5dp">
 
@@ -115,33 +115,546 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInput"
+                        android:id="@+id/textInputEtatCivil"
+                        style="@style/parent"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Votre état civil :" />
+
+                        <RadioGroup
+                            android:id="@+id/groupe_etatCivil"
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/radioButton_Single"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Célebitaire" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_Married"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Mariée" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_Divorced"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Divorcé" />
+                        </RadioGroup>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputNbEnfant"
                         style="@style/parent"
                         android:layout_marginTop="@dimen/meduimMargin">
 
                         <EditText
-                            android:id="@+id/editTextPassword"
+                            android:id="@+id/editTextAccount_NbEnfants"
                             style="@style/modifiedEditText"
-                            android:hint="@string/login_password_hint"
-                            android:inputType="textPassword"
+                            android:hint="Nombre d'enfants"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputBroSis"
+                        style="@style/parent"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Avez-vous des frères et sœurs !" />
+
+                        <RadioGroup
+                            android:id="@+id/groupe_BroSis"
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/radioButton_BroSisYes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Oui" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_BroSisNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Non"
+                                android:focusedByDefault="true"/>
+                        </RadioGroup>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputStatu"
+                        style="@style/parent"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Statut :" />
+
+                        <RadioGroup
+                            android:id="@+id/groupe_Statu"
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/radioButton_Employe"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Employé(e)" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_Student"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Etudiant(e)" />
+                        </RadioGroup>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputProffesion"
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/meduimMargin">
+
+                        <EditText
+                            android:id="@+id/editTextAccount_Proffesion"
+                            style="@style/modifiedEditText"
+                            android:hint="Votre proffesion : "
+                            android:inputType="text"
                             android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputPasswordConfirmation"
+                        android:id="@+id/textInputDispoSemaine"
                         style="@style/parent"
-                        android:layout_marginTop="@dimen/loginViewsMargin">
+                        android:layout_marginTop="5dp">
 
-                        <EditText
-                            android:id="@+id/editTextPasswordConfirmation"
+                        <TextView
                             style="@style/modifiedEditText"
-                            android:hint="@string/login_passwordConfirmation_hint"
-                            android:inputType="textPassword"
-                            android:maxLines="1" />
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Disponibilté au cours de la semaine :" />
+
+                        <RadioGroup
+                            android:id="@+id/groupe_DispoSemaine"
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/radioButton_DispoSemaine0"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0%" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_DispoSemaine50"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="50%" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_DispoSemaine100"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="100%" />
+                        </RadioGroup>
+
                     </com.google.android.material.textfield.TextInputLayout>
 
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputDispoWeekend"
+                        style="@style/parent"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Disponibilité au cours du weekend :" />
+
+                        <RadioGroup
+                            android:id="@+id/groupe_DispoWeekend"
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/radioButton_DispoWeekend0"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0%" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_DispoWeekend50"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="50%" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_DispoWeekend100"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="100%" />
+
+                        </RadioGroup>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputFavoriteFilm"
+                        style="@style/parent"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Quelle est votre genre du film préférée :" />
+
+                        <CheckBox android:id="@+id/checkbox_Action"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Action" />
+                        <CheckBox android:id="@+id/checkbox_Comédie"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Comédie"/>
+                        <CheckBox android:id="@+id/checkbox_Drama"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Drama" />
+                        <CheckBox android:id="@+id/checkbox_Aventure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Aventure" />
+                        <CheckBox android:id="@+id/checkbox_Horreur"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Horreur" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputFavoriteMusic"
+                        style="@style/parent"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Quelle est votre style du musique préférée :" />
+
+                        <CheckBox android:id="@+id/checkbox_MusicTunisienne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tunisienne" />
+                        <CheckBox android:id="@+id/checkbox_MusicOccidentale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Occidentale"/>
+                        <CheckBox android:id="@+id/checkbox_MusicOrientale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Orientale" />
+                        <CheckBox android:id="@+id/checkbox_MusicInstrumentale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Instrumentale" />
+                        <CheckBox android:id="@+id/checkbox_MusicLatin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Latin" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputSortir"
+                        style="@style/parent"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Préferez vous sortir :" />
+
+                        <RadioGroup
+                            android:id="@+id/groupe_Sortir"
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/radioButton_SortirFamille"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="En famille " />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_SortirIndiv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Individuellement" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_SortirAmis"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="En groupe d'amis" />
+                        </RadioGroup>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputReading"
+                        style="@style/parent"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Étes-vous passionné par la lecture :" />
+
+                        <RadioGroup
+                            android:id="@+id/groupe_ReadingPassionate"
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/radioButton_ReadingYes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Oui" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_ReadingNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Non" />
+
+                        </RadioGroup>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputIntellectualGames"
+                        style="@style/parent"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Quelle est votre jeux intellectuels préférées :" />
+
+                        <CheckBox android:id="@+id/checkbox_GameIntellecEchecs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Les Échecs" />
+                        <CheckBox android:id="@+id/checkbox_GameIntellecRubik"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Le Rubik's cube"/>
+                        <CheckBox android:id="@+id/checkbox_GameIntellecScrable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Le Scrabble" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputVideoGames"
+                        style="@style/parent"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Quelle est votre jeux vidéos préférées :" />
+
+                        <CheckBox android:id="@+id/checkbox_VideoGameNBA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NBA 2K21" />
+                        <CheckBox android:id="@+id/checkbox_VideoGameFifa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FIFA21"/>
+                        <CheckBox android:id="@+id/checkbox_VideoGameValorant"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="VALORANT" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputPlayingTime"
+                        style="@style/parent"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Combien de temps avez-vous passé à jouer à ce jeu :" />
+
+                        <RadioGroup
+                            android:id="@+id/groupe_PlayingTime"
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/radioButton_PlayingTime0h_2h"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Entre 15 min et 2 heures" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_PlayingTime2h_4h"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Entre 2 heures et 4 heures" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_PlayingTime4h_6h"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Entre 4 heures et 6 heures" />
+
+                        </RadioGroup>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputFavoritePlaces"
+                        style="@style/parent"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Où trouvez-vous le calme le plus :" />
+
+                        <CheckBox android:id="@+id/checkbox_FavoritePlacesSea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mer" />
+                        <CheckBox android:id="@+id/checkbox_FavoritePlacesMountain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Montagne"/>
+                        <CheckBox android:id="@+id/checkbox_FavoritePlacesDesert"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Désert" />
+                        <CheckBox android:id="@+id/checkbox_FavoritePlacesForest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Forêt" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputFavoriteSport"
+                        style="@style/parent"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Quelle est votre sport préférée :" />
+
+                        <CheckBox android:id="@+id/checkbox_FavoriteSportSwimming"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Natation" />
+                        <CheckBox android:id="@+id/checkbox_FavoriteSportGolf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Golf"/>
+                        <CheckBox android:id="@+id/checkbox_FavoriteSportCamping"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Camping" />
+                        <CheckBox android:id="@+id/checkbox_FavoriteSportMountaineering"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Alpinisme" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputShopping"
+                        style="@style/parent"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Combien de fois faites vous le shopping par moins :" />
+
+                        <RadioGroup
+                            android:id="@+id/groupe_Shopping"
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/radioButton_ShoppingTimes0"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Jamais" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_ShoppingTimes1_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Peut être une seule fois ou deux fois " />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_ShoppingTimes3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Je pense plus de 3 fois" />
+
+                        </RadioGroup>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+
+
                     <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
-                        android:id="@+id/cirRegisterButton"
+                        android:id="@+id/cirTerminerButton"
                         style="@style/loginButton"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/loginViewsMargin"
@@ -150,10 +663,27 @@
                         app:spinning_bar_color="#FFF"
                         app:spinning_bar_padding="6dp"
                         app:spinning_bar_width="4dp" />
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"/>
 
                 </LinearLayout>
 
+
             </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:weightSum="6">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="6" />
+
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
